@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct NoteAppApp: App {
+struct NotesApp: App {
+    var viewModel = NoteViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NotesListView(viewModel: viewModel)
         }
     }
 }
